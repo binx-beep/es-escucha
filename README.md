@@ -1,4 +1,8 @@
-# ES Escucha 2 · 西班牙语听写练习
+# ES Escucha 2 · 西班牙语听写练习 · Spanish Dictation Practice
+
+> **English:** A free Windows desktop app for **Spanish listening and dictation practice** with real videos. Open a TikTok or YouTube link (or a local video/audio file); the app generates Spanish subtitles **locally and offline with whisper.cpp**, keeps them hidden while you listen and type, then checks your dictation word by word and lets you save missed words to a vocabulary list (CSV / Anki export). [Download the latest release →](https://github.com/binx-beep/es-escucha/releases/latest)
+
+**关键词**：西班牙语听力 · 西语听写 · 西班牙语学习 · 精听 · 听写练习 · 自动字幕 · 西语字幕生成 · TikTok 西语 · YouTube 西语 · whisper 字幕 · Anki 生词本
 
 一款 Windows 桌面软件，用真实的西班牙语视频练听力：打开 TikTok / YouTube 链接或本地视频，软件在**本机**自动生成西语字幕并先隐藏起来，你边听边写，写完再对照字幕，找出没听出来的词，存进自己的词库。
 
@@ -93,6 +97,19 @@ docs/               截图
 ```
 
 常用命令：`npm install`、`npm test`、`npm start`（构建后启动）、`npm run package`（打包 exe）。
+
+## English overview
+
+**ES Escucha 2** is a Spanish *dictado* (dictation) trainer for learners at any level who want to practise listening comprehension with authentic content.
+
+- **Sources:** TikTok and YouTube links (no login needed for public videos), or any local video/audio file.
+- **Offline Spanish speech recognition:** whisper.cpp (Large v3 Turbo / Large v3 / Small) runs on your own PC with word-level timestamps — no account, no API key, nothing uploaded.
+- **Sentence-by-sentence dictation:** play a sentence, type what you hear, press Enter to check, Enter again for the next one; loop a sentence, slow playback (0.5×–1×), copy the correct sentence.
+- **Automatic checking:** word-by-word comparison ignoring case and punctuation; accent-only mistakes (*esta / está*) are highlighted separately.
+- **Vocabulary list:** right-click words to save them as new words, missed words or connected-speech problems; export to CSV for Excel or Anki.
+- **Keyboard-first:** `Ctrl+←/→` seek, `↑` play/pause, `↓` replay sentence.
+
+Download `ES-Escucha-2.exe` from [Releases](https://github.com/binx-beep/es-escucha/releases/latest) and run it — no installation required (Windows 10/11, 64-bit). The interface is in Chinese.
 
 ## 许可证与说明
 
