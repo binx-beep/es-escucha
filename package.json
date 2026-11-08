@@ -1,0 +1,55 @@
+{
+  "name": "es-escucha-2",
+  "productName": "ES Escucha 2",
+  "version": "2.0.0",
+  "description": "西班牙语听写练习（本地 whisper 识别）",
+  "private": true,
+  "type": "module",
+  "main": "electron/main.cjs",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build-renderer.mjs",
+    "start": "node scripts/build-renderer.mjs && electron .",
+    "dev": "node scripts/build-renderer.mjs --dev && electron .",
+    "test": "node --experimental-strip-types --test tests/text.test.mts",
+    "package": "node scripts/build-renderer.mjs && electron-builder --win portable",
+    "setup-electron": "node node_modules/electron/install.js"
+  },
+  "devDependencies": {
+    "electron": "43.4.0",
+    "electron-builder": "26.15.3",
+    "esbuild": "0.28.2",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "build": {
+    "appId": "com.esescucha.app2",
+    "productName": "ES Escucha 2",
+    "electronDist": "node_modules/electron/dist",
+    "asar": true,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "build/icon.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "resources/whisper",
+        "to": "whisper"
+      }
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico",
+      "artifactName": "ES-Escucha-2.exe"
+    }
+  },
+  "author": "se7en",
+  "license": "MIT"
+}

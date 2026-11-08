@@ -1,0 +1,5 @@
+node_modules/
+release/
+Escucha数据/
+*.exe
+!resources/whisper/Release/*.exe
